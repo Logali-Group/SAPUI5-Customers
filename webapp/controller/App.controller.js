@@ -1,22 +1,16 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/m/MessageToast",
-	"sap/ui/model/json/JSONModel",
+	"logaligroup/Customers/model/models",
 	"sap/ui/model/resource/ResourceModel"
-], function (Controller, MessageToast, JSONModel, ResourceModel) {
+], function (Controller, MessageToast, models, ResourceModel) {
 
 	return Controller.extend("logaligroup.Customers.controller.App", {
 
 		onInit: function () {
 
 			// set data model on view
-			var oData = {
-				recipient: {
-					name: "World"
-				}
-			};
-			var oModel = new JSONModel(oData);
-			this.getView().setModel(oModel);
+			this.getView().setModel(models.createRecipient());
 
 			// set i18n model on view
 			var i18nModel = new ResourceModel({
