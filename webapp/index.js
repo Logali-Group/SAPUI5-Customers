@@ -1,9 +1,10 @@
 sap.ui.define([
-	"sap/m/Text"
-], function (Text) {
-	"use strict";
+	"sap/ui/core/mvc/XMLView"
+], function (XMLView) {
 
-	new Text({
-		text: "Hello World"
-	}).placeAt("content");
+	XMLView.create({
+		viewName: "logaligroup.Customers.view.App"
+	}).then(function (oView) {
+		oView.placeAt("content");
+	});
 });
