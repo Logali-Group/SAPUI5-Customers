@@ -1,10 +1,12 @@
 sap.ui.define([
-	"sap/ui/core/mvc/XMLView"
-], function (XMLView) {
+	"sap/ui/core/ComponentContainer"
+], function (ComponentContainer) {
 
-	XMLView.create({
-		viewName: "logaligroup.Customers.view.App"
-	}).then(function (oView) {
-		oView.placeAt("content");
-	});
+	new ComponentContainer({
+		name: "logaligroup.Customers",
+		settings : {
+			id : "customers"
+		},
+		async: true
+	}).placeAt("content");
 });
