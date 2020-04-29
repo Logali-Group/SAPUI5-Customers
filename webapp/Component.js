@@ -6,12 +6,7 @@ sap.ui.define([
 
 	return UIComponent.extend("logaligroup.Customers.Component", {
 		metadata: {
-			rootView: {
-				"viewName": "logaligroup.Customers.view.App",
-				"type": "XML",
-				"async": true,
-				"id": "app"
-			}
+			manifest: "json"
 		},
 		init: function () {
 			// call the init function of the parent
