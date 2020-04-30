@@ -15,7 +15,6 @@ sap.ui.define([
 		},
 		
 		onOpenDialog : function () {
-			
 			this.getOwnerComponent().openHelloDialog();
 		}
 		
