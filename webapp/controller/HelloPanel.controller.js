@@ -1,8 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/m/MessageToast",
-	"sap/ui/core/Fragment"
-], function (Controller, MessageToast, Fragment) {
+	"sap/m/MessageToast"
+], function (Controller, MessageToast) {
 
 	return Controller.extend("logaligroup.Customers.controller.HelloPanel", {
 		
@@ -17,26 +16,7 @@ sap.ui.define([
 		
 		onOpenDialog : function () {
 			
-			var oView = this.getView();
-
-			if (!this.byId("helloDialog")) {
-				// load asynchronous XML fragment
-				Fragment.load({
-					id: oView.getId(),
-					name: "logaligroup.Customers.view.HelloDialog",
-					controller: this
-				}).then(function (oDialog) {
-					// connect dialog to the root view of this component
-					oView.addDependent(oDialog);
-					oDialog.open();
-				});
-			} else {
-				this.byId("helloDialog").open();
-			}
-		},
-		
-		onCloseDialog : function () {
-			this.byId("helloDialog").close();
+			this.getOwnerComponent().openHelloDialog();
 		}
 		
 	});

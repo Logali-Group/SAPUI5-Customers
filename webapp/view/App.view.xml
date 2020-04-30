@@ -6,6 +6,10 @@
 		<App>
 			<pages>
 				<Page title="{i18n>homePageTitle}">
+					<headerContent>
+						<Button icon="sap-icon://action"
+							    press=".onOpenDialog"/>
+					</headerContent>
 					<content>
 						<mvc:XMLView viewName="logaligroup.Customers.view.HelloPanel"/>
 					</content>

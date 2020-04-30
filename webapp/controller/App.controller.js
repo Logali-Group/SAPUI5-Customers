@@ -5,6 +5,10 @@ sap.ui.define([
 	return Controller.extend("logaligroup.Customers.controller.App", {
 
 		onInit: function () {
+		},
+		
+		onOpenDialog : function () {
+			this.getOwnerComponent().openHelloDialog();
 		}
 
 	});
