@@ -23,7 +23,8 @@ sap.ui.define([
 				// load asynchronous XML fragment
 				Fragment.load({
 					id: oView.getId(),
-					name: "logaligroup.Customers.view.HelloDialog"
+					name: "logaligroup.Customers.view.HelloDialog",
+					controller: this
 				}).then(function (oDialog) {
 					// connect dialog to the root view of this component
 					oView.addDependent(oDialog);
@@ -32,6 +33,10 @@ sap.ui.define([
 			} else {
 				this.byId("helloDialog").open();
 			}
+		},
+		
+		onCloseDialog : function () {
+			this.byId("helloDialog").close();
 		}
 		
 	});
