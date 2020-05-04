@@ -4,8 +4,14 @@
 	<List id="customerList" 
 	      headerText="{i18n>customerListTitle}" 
 	      class="sapUiResponsiveMargin" width="auto"
-	      items="{customer>/Customers}">
-		  <headerToolbar>
+	      items="{ 
+	                path : 'customer>/Customers',
+			    	sorter : {
+						path : 'Country',
+						group : true
+					}
+				}">
+		<headerToolbar>
 	         <Toolbar>
 	            <Title text="{i18n>customerListTitle}"/>
 	            <ToolbarSpacer/>
