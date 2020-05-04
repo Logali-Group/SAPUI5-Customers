@@ -5,6 +5,13 @@
 	      headerText="{i18n>customerListTitle}" 
 	      class="sapUiResponsiveMargin" width="auto"
 	      items="{customer>/Customers}">
+		  <headerToolbar>
+	         <Toolbar>
+	            <Title text="{i18n>customerListTitle}"/>
+	            <ToolbarSpacer/>
+	            <SearchField width="50%" search=".onFilterCustomers"/>
+	         </Toolbar>
+    	</headerToolbar>
 		<items>
          <ObjectListItem
             title="{customer>CompanyName} / {customer>ContactName}"
@@ -21,7 +28,7 @@
 						path: 'customer>ContactTitle',
 						formatter: '.formatter.contactTitle'
 					}"/>
-				</firstStatus>
+			</firstStatus>
         </ObjectListItem>
       </items>
 	</List>
