@@ -15,6 +15,7 @@ sap.ui.define([
 				currency: "USD"
 			});
 			this.getView().setModel(oViewModel, "view");
+			
 		},
 		
 		onFilterCustomers : function (oEvent) {

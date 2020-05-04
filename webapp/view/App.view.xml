@@ -1,18 +1,14 @@
-<mvc:View controllerName="logaligroup.Customers.controller.App" 
-          xmlns="sap.m" 
-          xmlns:mvc="sap.ui.core.mvc" 
-          displayBlock="true">
+<mvc:View controllerName="logaligroup.Customers.controller.App" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
 	<Shell>
 		<App>
 			<pages>
 				<Page title="{i18n>homePageTitle}">
 					<headerContent>
-						<Button icon="sap-icon://action"
-							    press=".onOpenDialog"/>
+						<Button icon="sap-icon://action" press=".onOpenDialog"/>
 					</headerContent>
 					<content>
 						<mvc:XMLView viewName="logaligroup.Customers.view.HelloPanel"/>
-						<mvc:XMLView viewName="logaligroup.Customers.view.CustomerList"/>
+						<mvc:XMLView viewName="logaligroup.Customers.view.CustomerListWz"/>
 					</content>
 				</Page>
 			</pages>
