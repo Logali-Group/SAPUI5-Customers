@@ -12,6 +12,7 @@
 					</headerContent>
 					<content>
 						<mvc:XMLView viewName="logaligroup.Customers.view.HelloPanel"/>
+						<mvc:XMLView viewName="logaligroup.Customers.view.CustomerList"/>
 					</content>
 				</Page>
 			</pages>

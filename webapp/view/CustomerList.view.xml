@@ -1,0 +1,14 @@
+<mvc:View xmlns="sap.m" 
+          xmlns:mvc="sap.ui.core.mvc">
+	<List id="customerList" 
+	      headerText="{i18n>customerListTitle}" 
+	      class="sapUiResponsiveMargin" width="auto"
+	      items="{customer>/Customers}">
+		<items>
+         <ObjectListItem
+            title="{customer>CompanyName} / {customer>ContactName}"
+         	number="{ parts: [{path: 'customer>SalesAmount'}] }">
+        </ObjectListItem>
+      </items>
+	</List>
+</mvc:View>
