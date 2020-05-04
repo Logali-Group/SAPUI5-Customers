@@ -1,4 +1,5 @@
-<mvc:View xmlns="sap.m" 
+<mvc:View controllerName="logaligroup.Customers.controller.CustomerList" 
+          xmlns="sap.m" 
           xmlns:mvc="sap.ui.core.mvc">
 	<List id="customerList" 
 	      headerText="{i18n>customerListTitle}" 
@@ -7,7 +8,13 @@
 		<items>
          <ObjectListItem
             title="{customer>CompanyName} / {customer>ContactName}"
-         	number="{ parts: [{path: 'customer>SalesAmount'}] }">
+         	number="{ parts: [{path: 'customer>SalesAmount'}, {path: 'view>/currency'}],
+			          type: 'sap.ui.model.type.Currency',
+				      formatOptions: {
+						showMeasure: false
+					  }
+			}"
+			numberUnit="{view>/currency}">
         </ObjectListItem>
       </items>
 	</List>
