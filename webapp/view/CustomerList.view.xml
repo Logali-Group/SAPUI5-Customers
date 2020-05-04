@@ -16,6 +16,12 @@
 			}"
 			numberUnit="{view>/currency}"
 			numberState="{=	${customer>SalesAmount} > 1000 ? 'Success' : 'Error' }">
+         	<firstStatus>
+					<ObjectStatus text="{
+						path: 'customer>ContactTitle',
+						formatter: '.formatter.contactTitle'
+					}"/>
+				</firstStatus>
         </ObjectListItem>
       </items>
 	</List>
