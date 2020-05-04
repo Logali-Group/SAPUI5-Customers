@@ -14,7 +14,8 @@
 						showMeasure: false
 					  }
 			}"
-			numberUnit="{view>/currency}">
+			numberUnit="{view>/currency}"
+			numberState="{=	${customer>SalesAmount} > 1000 ? 'Success' : 'Error' }">
         </ObjectListItem>
       </items>
 	</List>
