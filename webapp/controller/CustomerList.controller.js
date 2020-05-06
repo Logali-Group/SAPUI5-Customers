@@ -4,21 +4,21 @@ sap.ui.define([
 	"../model/formatter",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator"
-], function (Controller, JSONModel,formatter, Filter, FilterOperator) {
+], function (Controller, JSONModel, formatter, Filter, FilterOperator) {
 
 	return Controller.extend("logaligroup.Customers.controller.CustomerList", {
-        
-        formatter: formatter,
-        
-		onInit : function () {
+
+		formatter: formatter,
+
+		onInit: function () {
 			var oViewModel = new JSONModel({
 				currency: "USD"
 			});
 			this.getView().setModel(oViewModel, "view");
-			
+
 		},
-		
-		onFilterCustomers : function (oEvent) {
+
+		onFilterCustomers: function (oEvent) {
 
 			// build filter array
 			var aFilter = [];
@@ -31,6 +31,11 @@ sap.ui.define([
 			var oList = this.byId("customerList");
 			var oBinding = oList.getBinding("items");
 			oBinding.filter(aFilter);
+		},
+
+		onPress: function (oEvent) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("detail");
 		}
 	});
 });

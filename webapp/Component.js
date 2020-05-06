@@ -21,18 +21,20 @@ sap.ui.define([
 				bundleName: "logaligroup.Customers.i18n.i18n"
 			});
 			this.setModel(i18nModel, "i18n");
-			
+
 			// set dialog
 			this._helloDialog = new HelloDialog(this.getRootControl());
 
+			// create the views based on the url/hash
+			this.getRouter().initialize();
 		},
-		
-		exit : function() {
+
+		exit: function () {
 			this._helloDialog.destroy();
 			delete this._helloDialog;
 		},
 
-		openHelloDialog : function () {
+		openHelloDialog: function () {
 			this._helloDialog.open();
 		}
 	});

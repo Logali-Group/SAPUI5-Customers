@@ -21,7 +21,9 @@
 		<items>
          <ObjectListItem
             title="{customerWz>CompanyName} / {customerWz>ContactName} - {customerWz>City}"
- 			number="{customerWz>PostalCode}">
+ 			number="{customerWz>PostalCode}"
+ 			type="Navigation"
+			press="onPress">
          	<firstStatus>
 					<ObjectStatus text="{
 						path: 'customerWz>ContactTitle',
