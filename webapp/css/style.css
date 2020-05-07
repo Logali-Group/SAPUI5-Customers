@@ -1,3 +1,9 @@
 .boldElements {
   font-weight: bold;
 }
+.customerRating {
+	padding: 0.75rem;
+}
+.customerRating .sapMRI {
+	vertical-align: initial;
+}
