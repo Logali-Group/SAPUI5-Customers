@@ -103,7 +103,7 @@
 					"target": "overview"
 				},
 				{
-					"pattern": "detail",
+					"pattern": "detail/{customerDetails}",
 					"name": "detail",
 					"target": "detail"
 				}

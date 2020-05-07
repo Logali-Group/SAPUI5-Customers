@@ -1,6 +1,7 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/ui/core/UIComponent"
+], function (Controller, UIComponent) {
 	"use strict";
 
 	return Controller.extend("logaligroup.Customers.controller.Detail", {
@@ -11,8 +12,16 @@ sap.ui.define([
 		 * @memberOf logaligroup.Customers.view.Detail
 		 */
 		onInit: function () {
-
+			var oRouter = UIComponent.getRouterFor(this);
+			oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
 		},
+
+		_onObjectMatched: function (oEvent) {
+			this.getView().bindElement({
+				path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").customerDetails),
+				model: "customerWz"
+			});
+		}
 
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered

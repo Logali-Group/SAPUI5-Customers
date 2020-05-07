@@ -34,8 +34,11 @@ sap.ui.define([
 		},
 
 		onPress: function (oEvent) {
+			var oItem = oEvent.getSource();
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("detail");
+			oRouter.navTo("detail", {
+				customerDetails: window.encodeURIComponent(oItem.getBindingContext("customerWz").getPath().substr(1))
+			});
 		}
 	});
 });
