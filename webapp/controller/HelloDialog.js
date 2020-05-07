@@ -1,8 +1,8 @@
 sap.ui.define([
 	"sap/ui/base/ManagedObject",
-	"sap/ui/core/Fragment"
-], function (ManagedObject, Fragment) {
-	"use strict";
+	"sap/ui/core/Fragment",
+	"sap/ui/core/syncStyleClass"
+], function (ManagedObject, Fragment, syncStyleClass) {
 
 	return ManagedObject.extend("logaligroup.Customers.controller.HelloDialog", {
 
@@ -32,6 +32,8 @@ sap.ui.define([
 				}).then(function (oDialog) {
 					// connect dialog to the root view
 					oView.addDependent(oDialog);
+					// compact/cozy style
+					syncStyleClass(oView.getController().getOwnerComponent().getContentDensityClass(), oView, oDialog);
 					oDialog.open();
 				});
 			} else {
