@@ -4,17 +4,19 @@
           controllerName="logaligroup.Customers.controller.Detail"
 	     xmlns:html="http://www.w3.org/1999/xhtml">
 	
-	<Page title="{i18n>detailPageTitle}">
-		<ObjectHeader
-		    title="{customerWz>ContactName}">
-		<attributes>
-			<ObjectAttribute text="{customerWz>Address}"></ObjectAttribute>
-			<ObjectAttribute text="{customerWz>City}"></ObjectAttribute>
-			<ObjectAttribute text="{customerWz>PostalCode}"></ObjectAttribute>
-			<ObjectAttribute text="{customerWz>Country}"></ObjectAttribute>
-			<ObjectAttribute text="{customerWz>Phone}"></ObjectAttribute>
-		</attributes>
+	<Page title="{i18n>detailPageTitle}"
+	      showNavButton="true"
+		  navButtonPress=".onNavBack">
+		
+		<ObjectHeader title="{customerWz>ContactName}">
+			<attributes>
+				<ObjectAttribute text="{customerWz>Address}"></ObjectAttribute>
+				<ObjectAttribute text="{customerWz>City}"></ObjectAttribute>
+				<ObjectAttribute text="{customerWz>PostalCode}"></ObjectAttribute>
+				<ObjectAttribute text="{customerWz>Country}"></ObjectAttribute>
+				<ObjectAttribute text="{customerWz>Phone}"></ObjectAttribute>
+			</attributes>
 		</ObjectHeader>
+		
 	</Page>
-	
 </mvc:View>
