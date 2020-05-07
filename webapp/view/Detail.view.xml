@@ -9,7 +9,9 @@
 	      showNavButton="true"
 		  navButtonPress=".onNavBack">
 		
-		<ObjectHeader title="{customerWz>ContactName}">
+		<ObjectHeader responsive="true"
+		              fullScreenOptimized="true"
+		              title="{customerWz>ContactName}">
 			<attributes>
 				<ObjectAttribute text="{customerWz>Address}"></ObjectAttribute>
 				<ObjectAttribute text="{customerWz>City}"></ObjectAttribute>
