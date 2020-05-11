@@ -1,13 +1,18 @@
 <mvc:View controllerName="logaligroup.Customers.controller.CustomerList" 
           xmlns="sap.m" 
           xmlns:mvc="sap.ui.core.mvc">
-	<Panel>
+	
+	<Panel accessibleRole="Region">
 		
 		<headerToolbar>
 			<Toolbar>
 		    	<Title text="{i18n>customerListTitle}"/>
 		        <ToolbarSpacer/>
-		        <SearchField width="50%" search=".onFilterCustomers"/>
+		        <SearchField width="50%" 
+		                     search=".onFilterCustomers"
+		                     ariaLabelledBy="searchFieldLabel"
+						     ariaDescribedBy="searchFieldDescription"
+							 placeholder="{i18n>searchFieldPlaceholder}"/>
 		    </Toolbar>
 	    </headerToolbar>
 	    
